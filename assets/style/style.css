@@ -39,16 +39,34 @@ body {
     background-color: #F3EBE2;
     margin-top: 30px;
     padding: 10px;
+
+    display: inline-flex;
+    align-items: center;
+}
+
+.equals, .frac {
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .equals {
-    display: inline-flex;
-    flex-direction: column;
+    align-self: center;
 }
 
 .varlim {
     font-size: xx-small;
     color: gray; 
+}
+
+.fracline {
+    height: 1px;
+    background-color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.hide {
+    display: none;
 }
 
 input {
@@ -64,6 +82,21 @@ input {
 
 input.exp {
     width: 2ch;
+}
+
+input.succes {
+    border-color: #849A47;
+    background-color: #F1F4E1;
+    border-width: 0.5px;
+    border-bottom-width: 1px;
+}
+
+input.echec {
+    border-color: #DC5656;
+    background-color: #F8DDDD;
+
+    border-width: 0.5px;
+    border-bottom-width: 1px;
 }
 
 footer {

@@ -14,40 +14,86 @@
             <div id="dl">
                 <span>exp(x)</span>
                 <span class="equals">
+                    <span class="varlim">&nbsp;</span>
                     <span> = </span>
                     <span class="varlim">x → 0</span>
                 </span>
-                <span>
+
+                <span class="frac">
                     <input
                         type="text"
                         placeholder="1"
+                        data-key="constant"
+                        class="numerateur"
+                    />
+                    <span
+                        class="fracline hide hideable"
+                        data-key="constant"></span>
+                    <input
+                        type="text"
+                        placeholder="1"
+                        data-key="constant"
+                        class="denominateur hide hideable"
                     />
                 </span>
 
                 <span> + </span>
-                <span>
+                <span class="frac">
                     <input
                         type="text"
                         placeholder="1"
+                        data-key="x"
+                        class="numerateur"
+                    />
+                    <span
+                        class="fracline hide hideable"
+                        data-key="x"></span>
+                    <input
+                        type="text"
+                        placeholder="1"
+                        data-key="x"
+                        class="denominateur hide hideable"
                     />
                 </span>
                 <span>x</span>
 
                 <span> + </span>
-                <span>
+                <span class="frac">
                     <input
                         type="text"
                         placeholder="1"
+                        data-key="x2"
+                        class="numerateur"
+                    />
+                    <span
+                        class="fracline hide hideable"
+                        data-key="x2"></span>
+                    <input
+                        type="text"
+                        placeholder="1"
+                        data-key="x2"
+                        class="denominateur hide hideable"
                     />
                 </span>
                 <span>x<sup>2</sup></span>
 
                 <span> + … + </span>
 
-                <span>
+                <span class="frac">
                     <input
                         type="text"
                         placeholder="1"
+                        data-key="xn"
+                        class="numerateur"
+                    />
+                    <span
+                        class="fracline hide hideable"
+                        data-key="xn"></span>
+                    <input
+                        type="text"
+                        placeholder="1"
+                        data-key="xn"
+                        class="denominateur hide hideable"
                     />
                 </span>
                 <span>x<sup>n</sup></span>
@@ -58,6 +104,7 @@
                         class="exp"
                         type="text"
                         placeholder="1"
+                        data-key="reste"
                     /></sup>)
                 </span>
             </div>
@@ -66,5 +113,7 @@
     <footer>
         <p>Développé avec ❤️ par Milan</p>
     </footer>
+    
+    <script src="assets/script/check.js"></script>
 </body>
 </html>
