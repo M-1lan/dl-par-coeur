@@ -1,7 +1,7 @@
 const solutions = {
     constant: ["1", "1/1", "1/0!"],
     x: ["1", "1/1", "1/1!"],
-    x2: ["0.5", "1/2", "1/2!"],
+    x2: ["0.5", "0,5", "1/2", "1/2!"],
     xn: ["1/n!"],
     reste: ["n"]
 };
@@ -40,6 +40,10 @@ function getFractionValue(input) {
 
         if (denominateur.classList.contains("hide") || denominateurValue == "") {
             return numerateurValue
+        }
+
+        if (!denominateur.classList.contains("hide") && numerateurValue == "") {
+            numerateurValue = "1"
         }
 
         return numerateurValue + "/" + denominateurValue
