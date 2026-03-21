@@ -138,6 +138,7 @@ function checkFracDeletion(event) {
         })
     } else if (event.key == "Backspace"
             && input.selectionStart == 0
+            && input.selectionEnd == 0
             && input.classList.contains("denominateur")
         ) {
         event.preventDefault()
@@ -147,6 +148,30 @@ function checkFracDeletion(event) {
                     sibling.selectionStart = sibling.value.length
                     sibling.selectionEnd = sibling.value.length
                     sibling.value = sibling.value.substring(0, sibling.value.length - 1)
+                }
+            }
+            
+        })
+    } else if (input.classList.contains("numerateur") && event.key == "ArrowDown") {
+        event.preventDefault()
+        input.parentNode.childNodes.forEach(sibling => {
+            if (sibling.nodeType == 1) {
+                if (sibling.classList.contains("denominateur")
+                    && !sibling.classList.contains("hide")
+            ) {
+                sibling.selectionStart = sibling.value.length
+                sibling.selectionEnd = sibling.value.length
+            }
+        }
+        
+    })
+    } else if (input.classList.contains("denominateur") && event.key == "ArrowUp") {
+        event.preventDefault()
+        input.parentNode.childNodes.forEach(sibling => {
+            if (sibling.nodeType == 1) {
+                if (sibling.classList.contains("numerateur")) {
+                    sibling.selectionStart = sibling.value.length
+                    sibling.selectionEnd = sibling.value.length
                 }
             }
             
@@ -176,7 +201,7 @@ function checkFracCreation(event) {
             }
             
         })
-    }
+    } 
 
     checkFraction(input)
 }
